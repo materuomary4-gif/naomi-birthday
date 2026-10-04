@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160814">
+<title>Naomi's Birthday 💘</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--pink:#ff4f91;--hot:#ff176f;--soft:#ffd5e5;--dark:#120711;--card:rgba(255,255,255,.09)}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 50% 0,#4d1233 0,#1c0b19 38%,#090509 100%);color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.025),transparent 70%);z-index:10}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+.heart{position:absolute;bottom:-50px;animation:rise linear forwards;opacity:.75}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 6%;background:rgba(10,4,9,.55);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.logo{font-size:20px;font-weight:bold;color:#fff}.logo span{color:var(--pink)}
+.lang{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;border-radius:999px;padding:9px 14px;cursor:pointer}
+section{position:relative;z-index:3;padding:95px 7%;max-width:1100px;margin:auto}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:100px}
+.badge{display:inline-block;padding:8px 15px;border:1px solid rgba(255,145,188,.4);border-radius:999px;color:var(--soft);font:13px Arial;margin-bottom:22px;background:rgba(255,79,145,.08)}
+h1{font-size:clamp(48px,12vw,105px);line-height:.9;letter-spacing:-4px;text-shadow:0 8px 35px rgba(255,23,111,.35)}
+h1 span{color:var(--pink)}
+.subtitle{font-size:clamp(18px,3vw,26px);margin:25px auto 30px;color:#f7dce7;max-width:650px;line-height:1.5}
+.btn{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:999px;padding:14px 22px;background:linear-gradient(135deg,#ff5b9b,#e91e63);color:#fff;font-weight:bold;cursor:pointer;box-shadow:0 10px 35px rgba(255,23,111,.28);transition:.25s}
+.btn:hover{transform:translateY(-3px) scale(1.02)}
+.scroll{display:block;margin-top:50px;color:#c9aab8;font:12px Arial;letter-spacing:2px}
+.title{text-align:center;font-size:clamp(30px,6vw,52px);margin-bottom:18px}.title span{color:var(--pink)}
+.center{text-align:center}.lead{color:#d9bfca;line-height:1.8;max-width:700px;margin:0 auto 35px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:25px;padding:30px;box-shadow:0 20px 60px rgba(0,0,0,.2);backdrop-filter:blur(10px)}
+.letter{max-width:760px;margin:auto;line-height:1.9;color:#f5dfe8;font-size:18px}.letter .signature{margin-top:25px;color:#fff;font-size:24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.memory{min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(145deg,rgba(255,79,145,.16),rgba(255,255,255,.04));border-radius:22px;border:1px solid rgba(255,255,255,.08);padding:25px;transition:.3s}
+.memory:hover{transform:translateY(-7px);border-color:rgba(255,79,145,.5)}
+.memory b{display:block;font-size:21px;margin-bottom:9px}.memory p{color:#d9c0ca;line-height:1.6}
+.surprise{max-width:700px;margin:auto;text-align:center}
+.gift{font-size:75px;display:block;animation:pulse 1.8s infinite}@keyframes pulse{50%{transform:scale(1.1)}}
+.hidden{display:none!important}
+.reveal{margin-top:25px;color:#ffe1ec;line-height:1.8;font-size:18px}
+footer{text-align:center;padding:50px 20px 70px;color:#bca0ad;position:relative;z-index:3}
+footer strong{color:#ff80ac}
+@media(max-width:700px){.grid{grid-template-columns:1fr}section{padding-left:5%;padding-right:5%}h1{letter-spacing:-2px}.card{padding:23px}}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+
+<nav>
+  <div class="logo">Naomi <span>💘</span></div>
+  <button class="lang" id="langBtn" onclick="toggleLang()">🇹🇿 Kiswahili</button>
+</nav>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="badge" data-en="4 OCTOBER • YOUR SPECIAL DAY" data-sw="4 OKTOBA • SIKU YAKO MAALUM">4 OCTOBER • YOUR SPECIAL DAY</div>
+    <h1 data-en="Happy Birthday,<br><span>Naomi</span> 💘" data-sw="Heri ya Siku ya Kuzaliwa,<br><span>Naomi</span> 💘">Happy Birthday,<br><span>Naomi</span> 💘</h1>
+    <p class="subtitle" data-en="Today the world celebrates the beautiful person you are. And I celebrate you a little more." data-sw="Leo dunia inaadhimisha mtu mzuri uliyenaye. Na mimi nakuadhimisha kwa namna ya kipekee zaidi.">Today the world celebrates the beautiful person you are. And I celebrate you a little more.</p>
+    <a class="btn" href="#letter" data-en="Open My Birthday Message 💌" data-sw="Fungua Ujumbe Wangu wa Birthday 💌">Open My Birthday Message 💌</a>
+    <span class="scroll">↓ SCROLL WITH LOVE ↓</span>
+  </div>
+</section>
+
+<section id="letter">
+  <h2 class="title" data-en="A Letter <span>For You</span> 💌" data-sw="Ujumbe <span>Wangu Kwako</span> 💌">A Letter <span>For You</span> 💌</h2>
+  <p class="lead" data-en="Some feelings deserve more than a simple “Happy Birthday.”" data-sw="Baadhi ya hisia zinastahili zaidi ya kusema tu “Heri ya Birthday.”">Some feelings deserve more than a simple “Happy Birthday.”</p>
+  <div class="card letter">
+    <p data-en="Dear Naomi, ❤️" data-sw="Mpendwa Naomi, ❤️">Dear Naomi, ❤️</p><br>
+    <p data-en="Happy Birthday to a truly special person. On this beautiful 4th of October, I just want you to know how much your presence means to me. May this new year of your life bring you peace, genuine happiness, beautiful opportunities, and everything your heart quietly wishes for." data-sw="Heri ya siku yako ya kuzaliwa kwa mtu wa kipekee sana. Katika tarehe hii nzuri ya 4 Oktoba, nataka tu ujue kwamba uwepo wako una maana kubwa kwangu. Mwaka huu mpya wa maisha yako uwe na amani, furaha ya kweli, fursa nzuri, na kila kitu ambacho moyo wako unatamani kwa siri.">Happy Birthday to a truly special person. On this beautiful 4th of October, I just want you to know how much your presence means to me. May this new year of your life bring you peace, genuine happiness, beautiful opportunities, and everything your heart quietly wishes for.</p><br>
+    <p data-en="Keep smiling, keep dreaming, and never forget how precious you are. I hope today gives you a thousand reasons to smile—and I hope one of them is this little surprise from me. 💘" data-sw="Endelea kutabasamu, endelea kuota ndoto zako, na usisahau kamwe jinsi ulivyo wa thamani. Natamani leo ikupe sababu elfu za kutabasamu—na natumaini mojawapo iwe surprise hii ndogo kutoka kwangu. 💘">Keep smiling, keep dreaming, and never forget how precious you are. I hope today gives you a thousand reasons to smile—and I hope one of them is this little surprise from me. 💘</p>
+    <div class="signature">With love,<br><strong>Hance ❤️</strong></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="title" data-en="For Your <span>New Chapter</span> ✨" data-sw="Kwa <span>Safari Yako Mpya</span> ✨">For Your <span>New Chapter</span> ✨</h2>
+  <div class="grid">
+    <div class="memory"><div><b>🌹 Love</b><p data-en="May you always be surrounded by people who genuinely care for you." data-sw="Uzungukwe daima na watu wanaokujali kwa moyo wa kweli.">May you always be surrounded by people who genuinely care for you.</p></div></div>
+    <div class="memory"><div><b>🌟 Dreams</b><p data-en="May every dream you carry become a beautiful reality." data-sw="Kila ndoto uliyonayo iweze kuwa ukweli mzuri katika maisha yako.">May every dream you carry become a beautiful reality.</p></div></div>
+    <div class="memory"><div><b>💘 Happiness</b><p data-en="May your smile remain one of the brightest things about your life." data-sw="Tabasamu lako libaki kuwa miongoni mwa vitu vyenye mwanga zaidi katika maisha yako.">May your smile remain one of the brightest things about your life.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="card surprise">
+    <span class="gift">🎁</span>
+    <h2 class="title" data-en="One More <span>Surprise</span>" data-sw="Kuna <span>Surprise Nyingine</span>">One More <span>Surprise</span></h2>
+    <p class="lead" data-en="There is a little message hidden here just for you." data-sw="Kuna ujumbe mdogo uliofichwa hapa kwa ajili yako tu.">There is a little message hidden here just for you.</p>
+    <button class="btn" onclick="reveal()" data-en="Open the Surprise 💝" data-sw="Fungua Surprise 💝">Open the Surprise 💝</button>
+    <p id="reveal" class="reveal hidden" data-en="Naomi, if today is your birthday, then today is also a reminder that the world became a little more beautiful because you were born. Happy Birthday, my special one. May your heart always have a reason to smile. ❤️💘" data-sw="Naomi, kama leo ni siku yako ya kuzaliwa, basi leo pia ni ukumbusho kwamba dunia ilipata uzuri zaidi ulipozaliwa. Heri ya Birthday, mtu wangu wa kipekee. Moyo wako uwe na sababu ya kutabasamu kila siku. ❤️💘">Naomi, if today is your birthday, then today is also a reminder that the world became a little more beautiful because you were born. Happy Birthday, my special one. May your heart always have a reason to smile. ❤️💘</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>Made with <strong>❤️ & 💘</strong> for Naomi</p>
+  <p style="margin-top:8px">4 October • From Hance</p>
+</footer>
+
+<script>
+let lang="en";
+function toggleLang(){
+  lang=lang==="en"?"sw":"en";
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    const value=el.getAttribute("data-"+lang);
+    if(value!==null) el.innerHTML=value;
+  });
+  document.getElementById("langBtn").textContent=lang==="en"?"🇹🇿 Kiswahili":"🇬🇧 English";
+}
+function reveal(){
+  const el=document.getElementById("reveal");
+  el.classList.toggle("hidden");
+  burst();
+}
+function heart(){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.textContent=["❤️","💗","💖","💘","💕","✨"][Math.floor(Math.random()*6)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(14+Math.random()*22)+"px";
+  h.style.animationDuration=(5+Math.random()*7)+"s";
+  document.getElementById("hearts").appendChild(h);
+  setTimeout(()=>h.remove(),13000);
+}
+setInterval(heart,650);
+function burst(){
+  for(let i=0;i<18;i++) setTimeout(heart,i*70);
+}
+</script>
+</body>
+</html>
